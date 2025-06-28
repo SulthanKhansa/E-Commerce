@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Online - Kedaimu</title>
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/order.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Share+Tech&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Back Button  -->
+    <div class="back-button">
+      <a href="../html/home.html" class="back-arrow">
+        <span class="arrow">←</span>
+        <span class="back-text">Back to Home</span>
+      </a>
+    </div>
+
+    <!-- Mobile Navigation for Order Page -->
+    <nav class="mobile-order-nav">
+      <button class="mobile-hamburger" id="mobileHamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="mobile-order-menu" id="mobileOrderMenu">
+        <a href="../html/home.html">Home</a>
+        <a href="../html/home.html#menu">Menu</a>
+        <a href="../html/home.html#about">About</a>
+        <a href="../html/home.html#contact">Contact</a>
+        <a href="../html/location.html">Location</a>
+      </div>
+    </nav>
+
+    <div class="order-container">
+      <!-- Menu Section  -->
+      <div class="menu-section">
+        <div class="menu-header">
+          <h1>Our Menu</h1>
+          <p>Choose your favorite dishes</p>
+        </div>
+
+        <!-- Menu Tabs  -->
+        <div class="menu-tabs">
+          <button class="tab-btn active" data-tab="full-menu">Full Menu</button>
+          <button class="tab-btn" data-tab="featured">Featured</button>
+          <button class="tab-btn" data-tab="drinks">Drinks</button>
+          <button class="tab-btn" data-tab="topping">Topping</button>
+        </div>
+
+        <!-- Tab Contents -->
+        <div class="tab-content active" id="full-menu">
+          <div class="menu-grid">
+            <div
+              class="menu-item"
+              data-id="1"
+              data-name="Mie Ayam"
+              data-price="25000"
+            >
+              <img src="../img/mie ayam.jpg" alt="Mie Ayam" />
+              <div class="item-info">
+                <h3>Mie Ayam</h3>
+                <p class="price">Rp 12,000</p>
+                <div class="quantity-controls">
+                  <button class="qty-btn minus">-</button>
+                  <span class="quantity">0</span>
+                  <button class="qty-btn plus">+</button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="menu-item"
+              data-id="2"
+              data-name="Bakso"
+              data-price="20000"
+            >
+              <img src="../img/bakso.jpg" alt="Bakso" />
+              <div class="item-info">
+                <h3>Bakso</h3>
+                <p class="price">Rp 12,000</p>
+                <div class="quantity-controls">
+                  <button class="qty-btn minus">-</button>
+                  <span class="quantity">0</span>
+                  <button class="qty-btn plus">+</button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="menu-item"
+              data-id="3"
+              data-name="Sop Ayam"
+              data-price="22000"
+            >
+              <img src="../img/sop ayam.webp" alt="Sop Ayam" />
+              <div class="item-info">
+                <h3>Sop Ayam</h3>
+                <p class="price">Rp 12,000</p>
+                <div class="quantity-controls">
+                  <button class="qty-btn minus">-</button>
+                  <span class="quantity">0</span>
+                  <button class="qty-btn plus">+</button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="menu-item"
+              data-id="4"
+              data-name="Soto Ayam"
+              data-price="22000"
+            >
+              <img src="../img/soto ayam.jpeg" alt="Soto Ayam" />
+              <div class="item-info">
+                <h3>Soto Ayam</h3>
+                <p class="price">Rp 10,000</p>
+                <div class="quantity-controls">
+                  <button class="qty-btn minus">-</button>
+                  <span class="quantity">0</span>
+                  <button class="qty-btn plus">+</button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="menu-item"
+              data-id="5"
+              data-name="Soto Babat"
+              data-price="24000"
+            >
+              <img src="../img/soto babat.webp" alt="Soto Babat" />
+              <div class="item-info">
+                <h3>Soto Babat</h3>
+                <p class="price">Rp 15,000</p>
+                <div class="quantity-controls">
+                  <button class="qty-btn minus">-</button>
+                  <span class="quantity">0</span>
+                  <button class="qty-btn plus">+</button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="menu-item"
+              data-id="6"
+              data-name="Gulai Ayam"
+              data-price="26000"
+            >
+              <img src="../img/gulai ayam.jpg" alt="Gulai Ayam" />
+              <div class="item-info">
+                <h3>Gulai Ayam</h3>
+                <p class="price">Rp 12,000</p>
+                <div class="quantity-controls">
+                  <button class="qty-btn minus">-</button>
+                  <span class="quantity">0</span>
+                  <button class="qty-btn plus">+</button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="menu-item"
+              data-id="7"
+              data-name="Gulai Kambing"
+              data-price="28000"
+            >
+              <img src="../img/gulai kambing.jpg" alt="Gulai Kambing" />
+              <div class="item-info">
+                <h3>Gulai Kambing</h3>
+                <p class="price">Rp 20,000</p>
+                <div class="quantity-controls">
+                  <button class="qty-btn minus">-</button>
+                  <span class="quantity">0</span>
+                  <button class="qty-btn plus">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Featured Menu -->
+        <div class="tab-content" id="featured">
+          <div class="menu-grid">
+            <div
+              class="menu-item"
+              data-id="1"
+              data-name="Mie Ayam"
+              data-price="25000"
+            >
+              <img src="../img/mie ayam.jpg" alt="Mie Ayam" />
+              <div class="item-info">
+                <h3>Mie Ayam</h3>
+                <p class="price">Rp 12,000</p>
+                <div class="quantity-controls">
+                  <button class="qty-btn minus">-</button>
+                  <span class="quantity">0</span>
+                  <button class="qty-btn plus">+</button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="menu-item"
+              data-id="2"
+              data-name="Bakso"
+              data-price="20000"
+            >
+              <img src="../img/bakso.jpg" alt="Bakso" />
+              <div class="item-info">
+                <h3>Bakso</h3>
+                <p class="price">Rp 20,000</p>
+                <div class="quantity-controls">
+                  <button class="qty-btn minus">-</button>
+                  <span class="quantity">0</span>
+                  <button class="qty-btn plus">+</button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="menu-item"
+              data-id="3"
+              data-name="Sop Ayam"
+              data-price="22000"
+            >
+              <img src="../img/sop ayam.webp" alt="Sop Ayam" />
+              <div class="item-info">
+                <h3>Sop Ayam</h3>
+                <p class="price">Rp 12,000</p>
+                <div class="quantity-controls">
+                  <button class="qty-btn minus">-</button>
+                  <span class="quantity">0</span>
+                  <button class="qty-btn plus">+</button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="menu-item"
+              data-id="8"
+              data-name="Es Campur"
+              data-price="12000"
+            >
+              <img src="../img/es campur.jpg" alt="Es Campur" />
+              <div class="item-info">
+                <h3>Es Campur</h3>
+                <p class="price">Rp 15,000</p>
+                <div class="quantity-controls">
+                  <button class="qty-btn minus">-</button>
+                  <span class="quantity">0</span>
+                  <button class="qty-btn plus">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Drinks Menu -->
+        <div class="tab-content" id="drinks">
+          <div class="menu-grid">
+            <div
+              class="menu-item"
+              data-id="9"
+              data-name="Es Teh"
+              data-price="5000"
+            >
+              <img src="../img/es teh.jpg" alt="Es Teh" />
+              <div class="item-info">
+                <h3>Es Teh</h3>
+                <p class="price">Rp 3,000</p>
+                <div class="quantity-controls">
+                  <button class="qty-btn minus">-</button>
+                  <span class="quantity">0</span>
+                  <button class="qty-btn plus">+</button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="menu-item"
+              data-id="10"
+              data-name="Teh Hangat"
+              data-price="4000"
+            >
+              <img src="../img/teh hangat.jpg" alt="Teh Hangat" />
+              <div class="item-info">
+                <h3>Teh Hangat</h3>
+                <p class="price">Rp 2,000</p>
+                <div class="quantity-controls">
+                  <button class="qty-btn minus">-</button>
+                  <span class="quantity">0</span>
+                  <button class="qty-btn plus">+</button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="menu-item"
+              data-id="11"
+              data-name="Es Jeruk"
+              data-price="8000"
+            >
+              <img src="../img/es jeruk.jpg" alt="Es Jeruk" />
+              <div class="item-info">
+                <h3>Es Jeruk</h3>
+                <p class="price">Rp 4,000</p>
+                <div class="quantity-controls">
+                  <button class="qty-btn minus">-</button>
+                  <span class="quantity">0</span>
+                  <button class="qty-btn plus">+</button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="menu-item"
+              data-id="12"
+              data-name="Jeruk Hangat"
+              data-price="7000"
+            >
+              <img src="../img/jeruk hangat.jpg" alt="Jeruk Hangat" />
+              <div class="item-info">
+                <h3>Jeruk Hangat</h3>
+                <p class="price">Rp 3,000</p>
+                <div class="quantity-controls">
+                  <button class="qty-btn minus">-</button>
+                  <span class="quantity">0</span>
+                  <button class="qty-btn plus">+</button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="menu-item"
+              data-id="8"
+              data-name="Es Campur"
+              data-price="12000"
+            >
+              <img src="../img/es campur.jpg" alt="Es Campur" />
+              <div class="item-info">
+                <h3>Es Campur</h3>
+                <p class="price">Rp 15,000</p>
+                <div class="quantity-controls">
+                  <button class="qty-btn minus">-</button>
+                  <span class="quantity">0</span>
+                  <button class="qty-btn plus">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Topping Menu -->
+        <div class="tab-content" id="topping">
+          <div class="menu-grid">
+            <div
+              class="menu-item"
+              data-id="13"
+              data-name="Ayam Suwir"
+              data-price="8000"
+            >
+              <img src="../img/ayam suwir.jpg" alt="Ayam Suwir" />
+              <div class="item-info">
+                <h3>Ayam Suwir</h3>
+                <p class="price">Rp 6,000</p>
+                <div class="quantity-controls">
+                  <button class="qty-btn minus">-</button>
+                  <span class="quantity">0</span>
+                  <button class="qty-btn plus">+</button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="menu-item"
+              data-id="14"
+              data-name="Bakso Halus"
+              data-price="6000"
+            >
+              <img src="../img/bakso halus.jpg" alt="Bakso Halus" />
+              <div class="item-info">
+                <h3>Bakso Halus</h3>
+                <p class="price">Rp 5,000</p>
+                <div class="quantity-controls">
+                  <button class="qty-btn minus">-</button>
+                  <span class="quantity">0</span>
+                  <button class="qty-btn plus">+</button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="menu-item"
+              data-id="15"
+              data-name="Bakso Urat"
+              data-price="7000"
+            >
+              <img src="../img/bakso urat.jpeg" alt="Bakso Urat" />
+              <div class="item-info">
+                <h3>Bakso Urat</h3>
+                <p class="price">Rp 6,000</p>
+                <div class="quantity-controls">
+                  <button class="qty-btn minus">-</button>
+                  <span class="quantity">0</span>
+                  <button class="qty-btn plus">+</button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="menu-item"
+              data-id="16"
+              data-name="Pangsit"
+              data-price="5000"
+            >
+              <img src="../img/pangsit.jpg" alt="Pangsit" />
+              <div class="item-info">
+                <h3>Pangsit</h3>
+                <p class="price">Rp 5,000</p>
+                <div class="quantity-controls">
+                  <button class="qty-btn minus">-</button>
+                  <span class="quantity">0</span>
+                  <button class="qty-btn plus">+</button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="menu-item"
+              data-id="17"
+              data-name="Ceker"
+              data-price="9000"
+            >
+              <img src="../img/ceker.jpg" alt="Ceker" />
+              <div class="item-info">
+                <h3>Ceker</h3>
+                <p class="price">Rp 5,000</p>
+                <div class="quantity-controls">
+                  <button class="qty-btn minus">-</button>
+                  <span class="quantity">0</span>
+                  <button class="qty-btn plus">+</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- NEW TOPPINGS -->
+            <div
+              class="menu-item"
+              data-id="18"
+              data-name="Keju Mozzarella"
+              data-price="5000"
+            >
+              <img src="../img/keju.jpeg" alt="Keju Mozzarella" />
+              <div class="item-info">
+                <h3>Keju Mozzarella</h3>
+                <p class="price">Rp 5,000</p>
+                <div class="quantity-controls">
+                  <button class="qty-btn minus">-</button>
+                  <span class="quantity">0</span>
+                  <button class="qty-btn plus">+</button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="menu-item"
+              data-id="19"
+              data-name="Jeroan"
+              data-price="5000"
+            >
+              <img src="../img/jeroan.jpg" alt="Jeroan" />
+              <div class="item-info">
+                <h3>Jeroan</h3>
+                <p class="price">Rp 5,000</p>
+                <div class="quantity-controls">
+                  <button class="qty-btn minus">-</button>
+                  <span class="quantity">0</span>
+                  <button class="qty-btn plus">+</button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="menu-item"
+              data-id="20"
+              data-name="Kulit Ayam"
+              data-price="5000"
+            >
+              <img src="../img/kulit3.webp" alt="Kulit Ayam" />
+              <div class="item-info">
+                <h3>Kulit Ayam</h3>
+                <p class="price">Rp 5,000</p>
+                <div class="quantity-controls">
+                  <button class="qty-btn minus">-</button>
+                  <span class="quantity">0</span>
+                  <button class="qty-btn plus">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Order Summary -->
+      <div class="order-summary">
+        <div class="summary-header">
+          <h2>Your Order</h2>
+        </div>
+
+        <div class="order-items" id="orderItems">
+          <div class="empty-order">
+            <p>No items in your order yet</p>
+            <p>Start by selecting items from the menu</p>
+          </div>
+        </div>
+
+        <div class="order-total" id="orderTotal" style="display: none">
+          <div class="total-line">
+            <span>Subtotal:</span>
+            <span id="subtotalAmount">Rp 0</span>
+          </div>
+          <div class="total-line">
+            <span>Delivery Fee:</span>
+            <span>Rp 5,000</span>
+          </div>
+          <div class="total-line final-total">
+            <span>Total:</span>
+            <span id="totalAmount">Rp 5,000</span>
+          </div>
+
+          <!-- Updated checkout buttons with both options -->
+          <div class="checkout-buttons">
+            <button class="checkout-btn order-now" id="checkoutBtn">
+              Order Now
+            </button>
+            <button class="checkout-btn pre-order" id="preOrderBtn">
+              Pre-Order
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/order.js"></script>
+  </body>
+</html>

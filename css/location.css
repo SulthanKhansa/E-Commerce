@@ -1,0 +1,461 @@
+/* LOCATION PAGE STYLES */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Share Tech", sans-serif;
+  background: linear-gradient(135deg, #d4d8f0, #f0d4d8);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.location-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+/* GOOGLE MAPS */
+.map-section {
+  width: 50%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, rgba(212, 216, 240, 0.3), rgba(240, 212, 216, 0.3));
+}
+
+.map-section iframe {
+  width: 90%;
+  height: 70vh;
+  border: none;
+  filter: saturate(1.1) contrast(1.05);
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+.map-section iframe:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* INFORMATION */
+.info-section {
+  width: 50%;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.info-content {
+  padding: 30px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.location-header {
+  text-align: center;
+  margin-bottom: 35px;
+  padding-bottom: 20px;
+  border-bottom: 3px solid #8b1e3f;
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.location-header h1 {
+  color: #8b1e3f;
+  font-size: 2.8rem;
+  font-family: "Dancing Script", cursive;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.location-subtitle {
+  color: #666;
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.location-details {
+  margin-bottom: 30px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 25px;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid #8b1e3f;
+  transition: all 0.3s ease;
+}
+
+.detail-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.detail-icon {
+  font-size: 24px;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #8b1e3f, #b23a48);
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(139, 30, 63, 0.3);
+}
+
+.detail-content {
+  flex: 1;
+}
+
+.detail-content h3 {
+  color: #8b1e3f;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.detail-content p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.landmark {
+  color: #8b1e3f !important;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.hours-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hour-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 3px solid #8b1e3f;
+}
+
+.hour-item span:first-child {
+  color: #666;
+  font-weight: 500;
+}
+
+.hour-item span:last-child {
+  color: #8b1e3f;
+  font-weight: 700;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.action-btn {
+  padding: 18px 40px;
+  text-decoration: none;
+  border-radius: 30px;
+  text-align: center;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  border: 2px solid #8b1e3f;
+  background: white;
+  color: #8b1e3f;
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+}
+
+.action-btn:hover {
+  background: #8b1e3f;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(139, 30, 63, 0.3);
+}
+
+.action-btn.primary {
+  background: linear-gradient(135deg, #8b1e3f, #b23a48);
+  color: white;
+  border-color: transparent;
+}
+
+.action-btn.primary:hover {
+  background: linear-gradient(135deg, #b23a48, #d84556);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(139, 30, 63, 0.4);
+}
+
+/* BACK BUTTON */
+.back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.back-arrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid #8b1e3f;
+  border-radius: 25px;
+  text-decoration: none;
+  color: #8b1e3f;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.back-arrow:hover {
+  background: #8b1e3f;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 30, 63, 0.3);
+}
+
+.arrow {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.back-text {
+  font-family: "Share Tech", sans-serif;
+}
+
+/* MOBILE NAVIGATION FOR LOCATION PAGE */
+.mobile-location-nav {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10000;
+}
+
+.mobile-hamburger {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid #8b1e3f;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 8px;
+  width: 40px;
+  height: 35px;
+  justify-content: space-between;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.mobile-hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #8b1e3f;
+  transition: all 0.3s ease;
+  border-radius: 1px;
+}
+
+.mobile-hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.mobile-location-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 200px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 2px solid #8b1e3f;
+  border-radius: 8px;
+  padding: 10px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  margin-top: 10px;
+}
+
+.mobile-location-menu.active {
+  display: block;
+}
+
+.mobile-location-menu a {
+  display: block;
+  padding: 12px 20px;
+  color: #8b1e3f;
+  text-decoration: none;
+  font-family: "Share Tech", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  transition: background-color 0.3s ease;
+}
+
+.mobile-location-menu a:hover {
+  background-color: rgba(139, 30, 63, 0.1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .location-container {
+    flex-direction: column;
+  }
+
+  .map-section {
+    width: 100%;
+    height: 50vh;
+    padding: 30px;
+  }
+
+  .map-section iframe {
+    width: 95%;
+    height: 85%;
+    border-radius: 15px;
+  }
+
+  .info-section {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .info-content {
+    padding: 20px;
+  }
+
+  .location-header h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-location-nav {
+    display: block;
+  }
+
+  .back-text {
+    display: none;
+  }
+
+  .back-arrow {
+    padding: 10px;
+    min-width: auto;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    justify-content: center;
+  }
+
+  .arrow {
+    font-size: 20px;
+  }
+
+  body {
+    overflow: auto;
+  }
+
+  .location-container {
+    height: auto;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  .map-section {
+    width: 100%;
+    height: 45vh;
+    padding: 20px;
+  }
+
+  .map-section iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+  }
+
+  .info-section {
+    width: 100%;
+    height: auto;
+    overflow-y: visible;
+  }
+
+  .detail-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .back-button {
+    top: 10px;
+    left: 10px;
+  }
+
+  .back-arrow {
+    padding: 8px;
+    font-size: 12px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    min-width: auto;
+    justify-content: center;
+  }
+
+  .arrow {
+    font-size: 18px;
+  }
+
+  .info-content {
+    padding: 15px;
+  }
+
+  .location-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .detail-item {
+    padding: 15px;
+    margin-bottom: 10px;
+  }
+
+  .map-section {
+    height: 40vh;
+    padding: 15px;
+  }
+
+  .map-section iframe {
+    border-radius: 10px;
+  }
+}

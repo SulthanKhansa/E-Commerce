@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Mie Ayam</title>
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Share+Tech&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar hanya logo -->
+    <nav class="navbar navbar--hidden">
+      <div class="container">
+        <div class="logo">
+          <img src="../img/kedaimu2.png" alt="Mie Ayam Logo" />
+        </div>
+
+        <!-- Hamburger Menu Button -->
+        <button class="hamburger-menu" id="hamburgerMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-main" id="navMain">
+          <a href="#top">Home</a>
+          <a href="#menu">Menu</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="nav-actions">
+          <a href="location.html" class="find-location">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/684/684908.png"
+              class="location-icon"
+            />
+            Find a Location
+          </a>
+          <a href="order.html" class="btn-nav">Order Now</a>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Menu -->
+      <div class="mobile-nav" id="mobileNav">
+        <a href="#top">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="location.html" class="mobile-find-location">Find a Location</a>
+        <a href="order.html" class="mobile-order-btn">Order Now</a>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-bg">
+        <video autoplay muted loop playsinline>
+          <source
+            src="../img/Gen-4 Turbo Indonesian warung, small traditional food stall named 'Kedaimu', cooking yellow noodles in wok, authentic street food atmosphere, steam rising from wok, simple wooden counter, natural dayl.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+      <nav class="hero-nav">
+        <div class="hero-nav-left">
+          <a href="#menu">Menu</a>
+          <a href="#about">About</a>
+        </div>
+        <div class="hero-nav-right">
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+      <div class="hero-text">
+        <p class="welcome-text">Selamat Datang di</p>
+        <div class="hero-logo">
+          <img src="../img/kedaimu2.png" alt="Logo" />
+        </div>
+        <p class="slogan">Karena Lapar Tidak Bisa Ditunda</p>
+        <a href="order.html" class="btn">Try It Today</a>
+      </div>
+    </header>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+      <h2>Our Menu</h2>
+
+      <section class="menu-tabs-img">
+        <div class="tabs">
+          <button class="tab-img active" data-tab="full-img">Full Menu</button>
+          <button class="tab-img" data-tab="featured-img">Featured</button>
+          <button class="tab-img" data-tab="drinks-img">Drinks</button>
+          <button class="tab-img" data-tab="topping-img">Topping</button>
+        </div>
+
+        <!-- Full Menu -->
+        <div class="tab-content-img active" id="full-img">
+          <div class="menu-grid">
+            <div class="menu-card">
+              <img src="../img/mie ayam.jpg" alt="Mie Ayam" />
+              <p>Mie Ayam</p>
+            </div>
+            <div class="menu-card">
+              <img src="../img/bakso.jpg" alt="Bakso" />
+              <p>Bakso</p>
+            </div>
+            <div class="menu-card">
+              <img src="../img/sop ayam.webp" alt="Sop Ayam" />
+              <p>Sop Ayam</p>
+            </div>
+            <div class="menu-card">
+              <img src="../img/soto ayam.jpeg" alt="Soto Ayam" />
+              <p>Soto Ayam</p>
+            </div>
+            <div class="menu-card">
+              <img src="../img/soto babat.webp" alt="Soto Babat" />
+              <p>Soto Babat</p>
+            </div>
+            <div class="menu-card">
+              <img src="../img/gulai ayam.jpg" alt="Gulai Ayam" />
+              <p>Gulai Ayam</p>
+            </div>
+            <div class="menu-card">
+              <img src="../img/gulai kambing.jpg" alt="Gulai Kambing" />
+              <p>Gulai Kambing</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Featured -->
+        <div class="tab-content-img" id="featured-img">
+          <div class="menu-grid">
+            <div class="menu-card">
+              <img src="../img/mie ayam.jpg" alt="Mie Ayam" />
+              <p>Mie Ayam</p>
+            </div>
+            <div class="menu-card">
+              <img src="../img/bakso.jpg" alt="Bakso" />
+              <p>Bakso</p>
+            </div>
+            <div class="menu-card">
+              <img src="../img/soto ayam.jpeg" alt="Soto Ayam" />
+              <p>Soto Ayam</p>
+            </div>
+            <div class="menu-card">
+              <img src="../img/es campur.jpg" alt="Es Campur" />
+              <p>Es Campur</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Drinks -->
+        <div class="tab-content-img" id="drinks-img">
+          <div class="menu-grid">
+            <div class="menu-card">
+              <img src="../img/es teh.jpg" alt="Es Teh" />
+              <p>Es Teh</p>
+            </div>
+            <div class="menu-card">
+              <img src="../img/teh hangat.jpg" alt="Teh Hangat" />
+              <p>Teh Hangat</p>
+            </div>
+            <div class="menu-card">
+              <img src="../img/es jeruk.jpg" alt="Es Jeruk" />
+              <p>Es Jeruk</p>
+            </div>
+            <div class="menu-card">
+              <img src="../img/jeruk hangat.jpg" alt="Jeruk Hangat" />
+              <p>Jeruk Hangat</p>
+            </div>
+            <div class="menu-card">
+              <img src="../img/es campur.jpg" alt="Es Campur" />
+              <p>Es Campur</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Topping -->
+        <div class="tab-content-img" id="topping-img">
+          <div class="menu-grid">
+            <div class="menu-card">
+              <img src="../img/ayam suwir.jpg" alt="Ayam Suwir" />
+              <p>Ayam Suwir</p>
+            </div>
+            <div class="menu-card">
+              <img src="../img/bakso halus.jpg" alt="Bakso Halus" />
+              <p>Bakso Halus</p>
+            </div>
+            <div class="menu-card">
+              <img src="../img/bakso urat.jpeg" alt="Bakso Urat" />
+              <p>Bakso Urat</p>
+            </div>
+            <div class="menu-card">
+              <img
+                src="https://assets-cloudflare.segari-ops.id/recipes/pangsit-goreng-lsbc8vo9Nzuvd.jpg"
+                alt="Pangsit"
+              />
+              <p>Pangsit</p>
+            </div>
+            <div class="menu-card">
+              <img src="../img/ceker.jpg" alt="Ceker" />
+              <p>Ceker</p>
+            </div>
+            <div class="menu-card">
+              <img src="../img/keju.jpeg" alt="Keju Mozzarella" />
+              <p>Keju Mozzarella</p>
+            </div>
+            <div class="menu-card">
+              <img src="../img/jeroan.jpg" alt="Jeroan" />
+              <p>Jeroan</p>
+            </div>
+            <div class="menu-card">
+              <img src="../img/kulit3.webp" alt="Kulit Ayam" />
+              <p>Kulit Ayam</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <h2 class="section-title">About</h2>
+      <div class="about-container">
+        <div class="about-card fade-in">
+          <h3>About Us</h3>
+          <p>
+            Kedaimu berdiri sejak tahun 2014 dengan komitmen menyajikan mi ayam
+            berkualitas. Kami menggunakan bahan-bahan segar dan alami untuk
+            memberikan pengalaman yang lezat dan memuaskan bagi pelanggan.
+          </p>
+        </div>
+        <div class="about-card fade-in">
+          <h3>About Our Food</h3>
+          <p>
+            Di Kedaimu, kami yakin bahwa makanan kami bukan hanya sekedar
+            hidangan, tapi juga tentang pengalaman dan kenangan. Oleh karena
+            itu, kami berkomitmen untuk menyajikan mi ayam dengan kualitas
+            terbaik, menggunakan bahan-bahan segar dan resep yang telah diuji
+            waktu.
+          </p>
+        </div>
+        <div class="about-card team-card fade-in">
+          <h3>Development Team</h3>
+          <p class="team-intro">
+            Website ini dikembangkan oleh tim yang berdedikasi untuk menciptakan
+            pengalaman digital terbaik bagi pelanggan Kedaimu:
+          </p>
+
+          <div class="team-main-content">
+            <div class="team-names">
+              <ul class="team-list">
+                <li>NISSA INTAN NURANI</li>
+                <li>ANDIRA FINNA NARESWARI</li>
+                <li>NAELANISA APRILIA KHUMAEDI</li>
+                <li>RISKI RAMADHAN</li>
+                <li>SULTHAN KHANSA</li>
+              </ul>
+            </div>
+            <div class="team-photo">
+              <div class="photo-frame">
+                <div class="red-pin"></div>
+                <img src="../img/team.jpg" alt="Development Team Photo" />
+              </div>
+            </div>
+          </div>
+
+          <p class="team-description">
+            Kami menggabungkan teknologi modern dengan desain yang user-friendly
+            untuk memudahkan proses pemesanan dan memberikan informasi yang
+            lengkap tentang menu dan layanan kami.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-container">
+        <!-- Help Information -->
+        <div class="contact-card help-card">
+          <h3>Help?</h3>
+          <p>
+            Butuh bantuan atau punya pertanyaan? Kami siap membantu Anda! Tim
+            customer service kami tersedia untuk memberikan informasi tentang
+            menu, layanan, atau bantuan lainnya yang Anda butuhkan.
+          </p>
+          <div class="help-info">
+            <div class="help-item">
+              <strong>Jam Operasional:</strong>
+              <p>Senin - Minggu: 08:00 - 22:00</p>
+            </div>
+            <div class="help-item">
+              <strong>WhatsApp:</strong>
+              <p>+62 838-2093-1296</p>
+            </div>
+            <div class="help-item">
+              <strong>Alamat:</strong>
+              <p>
+                Jalan Raya Timur, Pacul Wetan, Pacul, Talang, Kabupaten Tegal,
+                Jawa Tengah 52193
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-card form-card">
+          <h3>Send us a Message</h3>
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="contact-button">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Logo & Description -->
+        <div class="footer-section">
+          <div class="footer-logo">
+            <img src="../img/kedaimu2.png" alt="Kedaimu Logo" />
+          </div>
+          <div class="footer-description">
+            <span class="main-title"> Kedaimu - Warung mie ayam terbaik </span>
+            <span class="since"> sejak 2014 </span>
+            <span class="slogan"> Karena lapar tidak bisa ditunda! </span>
+          </div>
+        </div>
+
+        <!-- Information -->
+        <div class="footer-section">
+          <h3>Information</h3>
+          <ul class="footer-links">
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Help</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="order.html">Order Online</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Social Media -->
+        <div class="footer-section">
+          <div class="contact-info">
+            <h3>Contact</h3>
+            <p><strong>WhatsApp:</strong> +62 838-2093-1296</p>
+            <p><strong>Email:</strong> kedaimu@gmail.com</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Copyright -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 Sulthan Khansa. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/script.js"></script>
+  </body>
+</html>

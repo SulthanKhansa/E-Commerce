@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find a Location - Mie Ayam</title>
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/location.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Share+Tech&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Back Button -->
+    <div class="back-button">
+      <a href="home.html" class="back-arrow">
+        <span class="arrow">←</span>
+        <span class="back-text">Back to Home</span>
+      </a>
+    </div>
+
+    <!-- Mobile Navigation for Location Page -->
+    <nav class="mobile-location-nav">
+      <button class="mobile-hamburger" id="mobileLocationHamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="mobile-location-menu" id="mobileLocationMenu">
+        <a href="home.html">Home</a>
+        <a href="home.html#menu">Menu</a>
+        <a href="home.html#about">About</a>
+        <a href="home.html#contact">Contact</a>
+        <a href="order.html">Order Now</a>
+      </div>
+    </nav>
+
+    <div class="location-container">
+      <!-- Left Side - Google Maps (1/2 screen) -->
+      <div class="map-section">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.0842855555555!2d109.157636!3d-6.890800500000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fb90b87e1c71d%3A0xb4e57d80d22f0356!2sGhea%20Tailor!5e0!3m2!1sen!2sid!4v1703234567890!5m2!1sen!2sid"
+          width="100%"
+          height="100%"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        >
+        </iframe>
+      </div>
+
+      <!-- Right Side - Location Information (1/2 screen) -->
+      <div class="info-section">
+        <div class="info-content">
+          <div class="location-details">
+            <div class="detail-item">
+              <div class="detail-icon">📍</div>
+              <div class="detail-content">
+                <h3>Address</h3>
+                <p>
+                  Jalan Raya Timur, Pacul Wetan, Pacul, Talang, Kabupaten Tegal,
+                  Jawa Tengah 52193
+                </p>
+              </div>
+            </div>
+
+            <div class="detail-item">
+              <div class="detail-icon">🕐</div>
+              <div class="detail-content">
+                <h3>Opening Hours</h3>
+                <div class="hours-list">
+                  <div class="hour-item">
+                    <span>Monday - Saturday</span>
+                    <span>07:00 - 22:00</span>
+                  </div>
+                  <div class="hour-item">
+                    <span>Sunday</span>
+                    <span>08:00 - 23:00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="detail-item">
+              <div class="detail-icon">📞</div>
+              <div class="detail-content">
+                <h3>Contact Information</h3>
+                <p>WhatsApp: +62 838-2093-1296</p>
+                <p>Email: kedaimu.com</p>
+                <p>Facebook: @kedaimu</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="action-buttons">
+            <a href="order.html" class="action-btn primary"> Order </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Mobile navigation functionality for location page
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileLocationHamburger = document.getElementById(
+          "mobileLocationHamburger"
+        );
+        const mobileLocationMenu =
+          document.getElementById("mobileLocationMenu");
+
+        if (mobileLocationHamburger && mobileLocationMenu) {
+          mobileLocationHamburger.addEventListener("click", function () {
+            mobileLocationHamburger.classList.toggle("active");
+            mobileLocationMenu.classList.toggle("active");
+          });
+
+          // Close mobile menu when clicking outside
+          document.addEventListener("click", function (e) {
+            if (
+              !mobileLocationHamburger.contains(e.target) &&
+              !mobileLocationMenu.contains(e.target)
+            ) {
+              mobileLocationHamburger.classList.remove("active");
+              mobileLocationMenu.classList.remove("active");
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
