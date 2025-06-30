@@ -672,12 +672,13 @@ body {
 .menu-card img {
   width: calc(100% - 20px);
   height: 200px;
-  object-fit: cover;
+  object-fit: contain; /* Changed from cover to contain for better zoom out effect */
   border-radius: 8px;
   position: relative;
   z-index: 1;
   margin: 10px;
   transform: rotate(2deg);
+  background: white; /* Added white background to fill empty space */
 }
 
 .menu-card:hover::before {
@@ -701,7 +702,7 @@ body {
 
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* Fixed 3 columns layout */
   gap: 30px;
   padding: 20px;
   max-width: 1200px;
@@ -1740,7 +1741,7 @@ section + footer {
   }
 
   .menu-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablet */
     gap: 20px;
     padding: 15px;
   }
@@ -1810,6 +1811,26 @@ section + footer {
   .menu-card p {
     font-size: 0.85rem;
     font-weight: 500;
+  }
+}
+
+/* Desktop Large Screens */
+@media (min-width: 1200px) {
+  .menu-grid {
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); /* 3 columns for larger screens, consistent with kedaimu.shop */
+    gap: 35px;
+    max-width: 1400px;
+  }
+}
+
+/* Desktop Medium Screens */
+@media (min-width: 900px) and (max-width: 1199px) {
+  .menu-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for medium desktop */
+    gap: 25px;
   }
 }
 
