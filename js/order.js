@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
         delete cart[itemId];
       }
 
-      updateOrderSummary();
+      updateCartAndAdjustHeight();
     });
   });
 
@@ -131,6 +131,69 @@ document.addEventListener("DOMContentLoaded", function () {
     subtotalAmount.textContent = `Rp ${subtotal.toLocaleString()}`;
     totalAmountElement.textContent = `Rp ${finalTotal.toLocaleString()}`;
     orderTotal.style.display = "block";
+
+    // Adjust order summary height for tablet
+    adjustOrderSummaryHeight();
+  }
+
+  // Function to adjust order summary height based on items count
+  function adjustOrderSummaryHeight() {
+    const orderSummary = document.querySelector(".order-summary");
+    const orderItems = document.getElementById("orderItems");
+    const itemCount = Object.keys(cart).length;
+    const isTablet = window.innerWidth >= 769 && window.innerWidth <= 1024;
+    const isMobile = window.innerWidth <= 768;
+
+    if ((isTablet || isMobile) && orderSummary) {
+      // Remove previous classes
+      orderSummary.classList.remove("full-summary");
+      orderItems.classList.remove("scrollable");
+
+      if (itemCount === 0) {
+        // Empty order - minimal height
+        if (isMobile) {
+          orderSummary.style.maxHeight = "20vh";
+        } else {
+          orderSummary.style.maxHeight = "18vh";
+        }
+      } else if (itemCount === 1) {
+        // Single item - ensure it's visible immediately
+        if (isMobile) {
+          orderSummary.style.maxHeight = "40vh"; // Increased from 35vh for single item
+        } else {
+          orderSummary.style.maxHeight = "35vh"; // Increased from 32vh for single item
+        }
+      } else if (itemCount <= 3) {
+        // Few items - moderate height
+        if (isMobile) {
+          orderSummary.style.maxHeight = "42vh";
+        } else {
+          orderSummary.style.maxHeight = "38vh";
+        }
+      } else if (itemCount <= 5) {
+        // More items - larger height
+        if (isMobile) {
+          orderSummary.style.maxHeight = "45vh";
+        } else {
+          orderSummary.style.maxHeight = "42vh";
+        }
+      } else {
+        // Many items - maximum reasonable height with indicators
+        if (isMobile) {
+          orderSummary.style.maxHeight = "48vh";
+        } else {
+          orderSummary.style.maxHeight = "45vh";
+        }
+        orderSummary.classList.add("full-summary");
+        orderItems.classList.add("scrollable");
+      }
+    }
+  }
+
+  // Call this function whenever cart is updated
+  function updateCartAndAdjustHeight() {
+    updateOrderSummary();
+    adjustOrderSummaryHeight();
   }
 
   // Checkout functionality
@@ -204,4 +267,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     return subtotal;
   }
+
+  // Handle window resize for tablet optimization
+  window.addEventListener("resize", function () {
+    adjustOrderSummaryHeight();
+  });
+
+  // Handle orientation change for tablets
+  window.addEventListener("orientationchange", function () {
+    setTimeout(function () {
+      adjustOrderSummaryHeight();
+    }, 100);
+  });
 });
