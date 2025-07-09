@@ -203,24 +203,6 @@ body {
   flex: 1;
   padding: 20px;
   overflow-y: auto;
-  scroll-behavior: smooth;
-}
-
-.order-items::-webkit-scrollbar {
-  width: 4px;
-}
-
-.order-items::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-.order-items::-webkit-scrollbar-thumb {
-  background: #8b1e3f;
-  border-radius: 2px;
-}
-
-.order-items::-webkit-scrollbar-thumb:hover {
-  background: #b23a48;
 }
 
 .empty-order {
@@ -521,69 +503,6 @@ body {
     font-size: 1rem;
     margin-bottom: 12px;
   }
-
-  /* Make summary header more compact on tablet */
-  .summary-header {
-    padding: 12px 15px; /* Reduced from 20px 15px */
-  }
-
-  .summary-header h2 {
-    font-size: 1.3rem; /* Reduced from 1.5rem */
-    margin: 0;
-  }
-
-  /* Make order items more compact */
-  .order-item {
-    padding: 12px 0;
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 8px;
-  }
-
-  .order-item-info h4 {
-    font-size: 15px; /* Slightly larger */
-    margin-bottom: 6px;
-    font-weight: 600;
-    color: #8b1e3f;
-    line-height: 1.3;
-  }
-
-  .order-item-info .item-price {
-    font-size: 13px; /* Slightly larger */
-    color: #666;
-    margin-bottom: 4px;
-  }
-
-  .order-item-controls {
-    gap: 6px;
-  }
-
-  .order-item-qty {
-    font-size: 14px;
-    font-weight: 600;
-    color: #8b1e3f;
-    background: rgba(139, 30, 63, 0.1);
-    padding: 2px 8px;
-    border-radius: 12px;
-  }
-
-  .order-item-total {
-    font-size: 15px; /* Larger for emphasis */
-    font-weight: 700;
-    color: #8b1e3f;
-  }
-
-  /* Empty order styling */
-  .empty-order {
-    padding: 30px 15px;
-    text-align: center;
-  }
-
-  .empty-order p {
-    font-size: 15px; /* Larger for better readability */
-    color: #666;
-    margin-bottom: 8px;
-    line-height: 1.4;
-  }
 }
 
 @media (max-width: 768px) {
@@ -615,7 +534,7 @@ body {
   .menu-section {
     width: 100%;
     max-height: none;
-    padding: 10px 15px 5px 15px; /* Reduced bottom padding to give more space for order summary */
+    padding: 15px;
   }
 
   .menu-header h1 {
@@ -676,100 +595,59 @@ body {
     margin-bottom: 12px;
   }
 
-  /* Make summary header more compact on tablet */
-  .summary-header {
-    padding: 12px 15px; /* Reduced from 20px 15px */
+  .order-summary {
+    width: 100%;
+    max-height: 40vh; /* Reduced from 60vh to 40vh */
+    position: sticky;
+    bottom: 0;
+    overflow-y: auto;
+    border-top: 2px solid #8b1e3f;
   }
 
-  .summary-header h2 {
-    font-size: 1.3rem; /* Reduced from 1.5rem */
-    margin: 0;
+  /* When order is empty, make it smaller */
+  .order-summary:has(.empty-order) {
+    max-height: 25vh;
   }
 
-  /* Make order items more compact */
-  .order-item {
-    padding: 12px 0;
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 8px;
+  .order-items {
+    max-height: 20vh; /* Reduced from 35vh to 20vh */
+    overflow-y: auto;
+    padding: 15px;
   }
 
-  .order-item-info h4 {
-    font-size: 15px; /* Slightly larger */
-    margin-bottom: 6px;
-    font-weight: 600;
-    color: #8b1e3f;
-    line-height: 1.3;
-  }
-
-  .order-item-info .item-price {
-    font-size: 13px; /* Slightly larger */
-    color: #666;
-    margin-bottom: 4px;
-  }
-
-  .order-item-controls {
-    gap: 6px;
-  }
-
-  .order-item-qty {
-    font-size: 14px;
-    font-weight: 600;
-    color: #8b1e3f;
-    background: rgba(139, 30, 63, 0.1);
-    padding: 2px 8px;
-    border-radius: 12px;
-  }
-
-  .order-item-total {
-    font-size: 15px; /* Larger for emphasis */
-    font-weight: 700;
-    color: #8b1e3f;
-  }
-
-  /* Empty order styling */
   .empty-order {
-    padding: 30px 15px;
     text-align: center;
+    color: #666;
+    padding: 20px 0; /* Reduced padding */
   }
 
   .empty-order p {
-    font-size: 15px; /* Larger for better readability */
-    color: #666;
-    margin-bottom: 8px;
-    line-height: 1.4;
+    margin-bottom: 8px; /* Reduced margin */
+    font-size: 13px; /* Smaller font */
   }
 
-  /* Mobile Order Summary Enhancements */
-  .order-summary {
-    border-top: 3px solid #8b1e3f;
-    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  .order-total {
+    padding: 15px;
   }
 
-  .summary-header {
-    background: linear-gradient(135deg, #8b1e3f, #b23a48);
-    padding: 15px 15px;
+  .checkout-buttons {
+    flex-direction: column;
+    gap: 8px;
   }
 
-  .summary-header h2 {
-    font-size: 1.4rem;
-    font-weight: 600;
-    text-align: center;
-    margin: 0;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  .checkout-btn {
+    padding: 12px 16px;
+    font-size: 14px;
   }
 
-  /* Order items more visible */
-  .order-items {
-    background: #fafafa;
-    border: 1px solid #eee;
+  .back-button {
+    top: 15px;
+    left: 15px;
   }
 
-  /* Better scroll indicator */
-  .order-items.scrollable::after {
-    background: linear-gradient(135deg, #8b1e3f, #b23a48);
-    font-weight: 600;
-    padding: 6px;
-    font-size: 0.75rem;
+  .back-arrow {
+    padding: 10px 16px;
+    font-size: 13px;
   }
 }
 
@@ -861,15 +739,15 @@ body {
   }
 
   .order-summary {
-    max-height: 40vh; /* Increased from 45vh to be consistent with JS single item */
+    max-height: 35vh; /* Reduced from 45vh to 35vh */
     overflow-y: auto;
     border-top: 2px solid #8b1e3f;
   }
 
   .order-items {
-    max-height: 20vh; /* Adjusted for single item visibility */
+    max-height: 15vh; /* Reduced from 20vh to 15vh */
     overflow-y: auto;
-    padding: 12px;
+    padding: 10px;
   }
 
   .summary-header {
@@ -880,98 +758,12 @@ body {
     font-size: 1.3rem; /* Slightly smaller */
   }
 
-  /* Better styling for single order item in mobile */
-  .order-item {
-    margin-bottom: 8px;
-    padding: 8px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 6px;
-    border-left: 3px solid #8b1e3f;
-    min-height: 50px; /* Ensure minimum height for visibility */
+  .order-total {
+    padding: 10px;
   }
 
-  .order-item h4 {
-    font-size: 0.9rem;
-    color: #8b1e3f;
-    margin-bottom: 4px;
+  /* MOBILE NAVIGATION */
+  .mobile-order-nav {
+    display: flex;
   }
-
-  .order-item p {
-    font-size: 0.8rem;
-    color: #666;
-    margin: 2px 0;
-  }
-
-  .order-item .item-price {
-    font-weight: bold;
-    color: #8b1e3f;
-    font-size: 0.85rem;
-  }
-}
-
-/* Tablet Landscape - Better Order Summary Management */
-@media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
-  .order-summary {
-    max-height: 40vh; /* Increased from 30vh for better visibility */
-    position: sticky;
-    bottom: 0;
-  }
-
-  .order-summary:has(.empty-order) {
-    max-height: 20vh; /* Increased from 15vh when empty */
-  }
-
-  .order-items {
-    max-height: 22vh; /* Increased from 12vh for better item visibility */
-    overflow-y: auto;
-  }
-
-  .summary-header {
-    padding: 8px 15px; /* Extra compact header */
-  }
-
-  .summary-header h2 {
-    font-size: 1.2rem;
-  }
-
-  .menu-section {
-    padding-bottom: 5px; /* Reduced bottom padding */
-  }
-}
-
-/* Tablet Portrait - Balanced Order Summary */
-@media (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
-  .order-summary {
-    max-height: 42vh; /* Increased from 32vh for better visibility */
-  }
-
-  .order-summary:has(.empty-order) {
-    max-height: 22vh; /* Increased from 18vh when empty */
-  }
-
-  .order-items {
-    max-height: 24vh; /* Increased from 14vh for better item visibility */
-  }
-}
-
-/* Visual indicator when order summary is full */
-.order-summary.full-summary {
-  border-top: 3px solid #ff6b6b;
-}
-
-.order-summary.full-summary .summary-header {
-  background: linear-gradient(135deg, #8b1e3f, #ff6b6b);
-}
-
-/* Show scroll hint when there are many items */
-.order-items.scrollable::after {
-  content: "Scroll untuk melihat semua item ↕";
-  position: sticky;
-  bottom: 0;
-  background: rgba(139, 30, 63, 0.9);
-  color: white;
-  text-align: center;
-  padding: 4px;
-  font-size: 0.7rem;
-  display: block;
 }
